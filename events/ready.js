@@ -2,20 +2,20 @@ module.exports = {
   name: 'ready',
   execute(client) {
     console.log('Ticket Bot ready!')
-    console.log('Thank you very much for using Ticket Bot! Developed with the ❤️ by Sayrix');
+    console.log('De bot is aan! ❤️  by Raiyah');
     const oniChan = client.channels.cache.get(client.config.ticketChannel)
 
     function sendTicketMSG() {
       const embed = new client.discord.MessageEmbed()
         .setColor('6d6ee8')
         .setAuthor('Ticket', client.user.avatarURL())
-        .setDescription('Cliquez sur le bouton ci-dessous pour ouvrir un ticket')
+        .setDescription('To create a ticket, please react down below')
         .setFooter(client.config.footerText, client.user.avatarURL())
       const row = new client.discord.MessageActionRow()
         .addComponents(
           new client.discord.MessageButton()
           .setCustomId('open-ticket')
-          .setLabel('Ouvrir un ticket')
+          .setLabel('Create a Ticket')
           .setEmoji('✉️')
           .setStyle('PRIMARY'),
         );
