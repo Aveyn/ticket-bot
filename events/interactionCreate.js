@@ -7,7 +7,7 @@ module.exports = {
     if (interaction.customId == "open-ticket") {
       if (client.guilds.cache.get(interaction.guildId).channels.cache.find(c => c.topic == interaction.user.id)) {
         return interaction.reply({
-          content: 'Vous avez déjà créé un ticket !',
+          content: 'Je hebt al een ticket open!',
           ephemeral: true
         });
       };
@@ -31,7 +31,7 @@ module.exports = {
         type: 'text',
       }).then(async c => {
         interaction.reply({
-          content: `Ticket créé! <#${c.id}>`,
+          content: `Ticket aangemaakt! <#${c.id}>`,
           ephemeral: true
         });
 
@@ -91,7 +91,7 @@ module.exports = {
                   .addComponents(
                     new client.discord.MessageButton()
                     .setCustomId('close-ticket')
-                    .setLabel('Fermer le ticket')
+                    .setLabel('Close Ticket')
                     .setEmoji('899745362137477181')
                     .setStyle('DANGER'),
                   );
@@ -147,11 +147,11 @@ module.exports = {
         .addComponents(
           new client.discord.MessageButton()
           .setCustomId('confirm-close')
-          .setLabel('Fermer le ticket')
+          .setLabel('Close ticket')
           .setStyle('DANGER'),
           new client.discord.MessageButton()
           .setCustomId('no')
-          .setLabel('Annuler la fermeture')
+          .setLabel('Cancel Closing')
           .setStyle('SECONDARY'),
         );
 

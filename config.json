@@ -1,7 +1,6 @@
 {
   "clientId": "911433554045567047",
 
-
   "parentOpened": "903306664176943124",
   "parentTransactions": "912049662079402034",
   "parentJeux": "912049662079402034",
@@ -14,5 +13,5 @@
   "logsTicket": "912049662079402034",
   "ticketChannel": "903306683722395719",
 
-  "footerText": "Faith Tickets - Code by Milan"
+  "footerText": "Adventage BOT - Coded in JS"
 }
